@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Eye in the Sky Weather App</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+	<main class="maincontainer">
+		<section class="headingbox">
+			<h1>Eye In The Sky</h1>
+			<h2>Weather App</h2>
+		</section>
+		<section class="searchsection" aria-label="Search area">
+				<textarea class="cityInput" id="cityInput">Type the city you want to know the weather of and press search or enter</textarea>
+        		<button class="searchbutton" id="searchBtn" type="button">Search</button>
+				<p id="statusMessage">loading...</p>
+      	</section>
+		
+		<section>
+			<div class="weatherCard hidden" id="weatherCard" aria-live="polite">
+  				<div class="mainCard">
+					<p class="weatherIcon" id="weatherIcon" ></p>
+    				<h2 class="cityName" id="cityName"><b>John Doe</b></h2>
+    				<p class="weatherCondition" id="conditionText">Weathery</p>
+  				</div>
+				<div class="tempCard">
+					<h3 class="temp" id="temperature">Temp: ˚F</h3>
+					<h3 class="feels" id="feelsLike">Temp: ˚F</h3>
+					<h3 class="humidity" id="humidityValue">Temp: ˚F</h3>
+				</div>
+				<div class="windCard">
+					<p class="windSpeed" id="windValue">Wind Speed: mph</p>
+					<p class="direction" id="windDirectionValue">Wind Direction: </p>
+					<p class="dewPoint" id="dewPointValue">Dew Point: </p>
+				</div>
+			</div>
+      	</section>
+		
+	</main>
+
+<script src="js/script.js" defer></script>
+</body>
+</html>
