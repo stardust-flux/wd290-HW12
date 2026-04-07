@@ -68,6 +68,9 @@ const humidityValue = document.getElementById("humidityValue");
 const windValue = document.getElementById("windValue");
 // Shows current wind speed
 
+const winddirectionValue = document.getElementById("winddirectionValue");
+
+const uvValue = document.getElementById("uvValue");
 
 // ------------------------------------------------------------
 // 2. STARTUP LOGS
@@ -340,7 +343,7 @@ async function getWeather() {
     // ------------------------------------------------------
     const weatherUrl =
       `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}` +
-      `&hourly=dew_point_2m&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,wind_direction_10m` +
+      `&hourly=dew_point_2m&current=temperature_2m,uv_index,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,wind_direction_10m` +
       `&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=auto`;
 
     console.log("Weather URL:", weatherUrl);
@@ -418,11 +421,14 @@ function renderWeather(name, country, current) {
 
   // Math.round() makes the temperature look cleaner
   // Example: 72.6 becomes 73
-  temperature.textContent = `${Math.round(current.temperature_2m)}°F`;
-  feelsLike.textContent = `Feels like ${Math.round(current.apparent_temperature)}°F`;
+  temperature.textContent = `Temp: ${Math.round(current.temperature_2m)}°F`;
+  feelsLike.textContent = `Feels like: ${Math.round(current.apparent_temperature)}°F`;
 
-  humidityValue.textContent = `${current.relative_humidity_2m}%`;
-  windValue.textContent = `${Math.round(current.wind_speed_10m)} mph`;
+  humidityValue.textContent = `Humidity: ${current.relative_humidity_2m}%`;
+  windValue.textContent = `Winds: ${Math.round(current.wind_speed_10m)} mph`;
+	
+	winddirectionValue.textContent = `Wind Direction: ${current.wind_direction_10m}°`;
+	uvValue.textContent = `UV Index: ${current.uv_index}`;
 
   // Log what the user should now see
   console.log("Updated DOM values:");
@@ -432,6 +438,8 @@ function renderWeather(name, country, current) {
   console.log("Feels like:", feelsLike.textContent);
   console.log("Humidity:", humidityValue.textContent);
   console.log("Wind:", windValue.textContent);
+	console.log("Wind Directiion:", winddirectionValue.textContent);
+	console.log("UV index:", uvValue.textContent);
 
   // Finally show the card after data is ready
   showCard();

@@ -7,15 +7,17 @@
 </head>
 <body>
 	<main class="maincontainer">
-		<section class="headingbox">
-			<h1>Eye In The Sky</h1>
-			<h2>Weather App</h2>
-		</section>
-		<section class="searchsection" aria-label="Search area">
+		<section class="topCard">
+			<section class="headingbox">
+				<h1>Eye In The Sky</h1>
+				<h2>Weather App</h2>
+			</section>
+			<section class="searchsection" aria-label="Search area">
 				<textarea class="cityInput" id="cityInput">Type the city you want to know the weather of and press search or enter</textarea>
         		<button class="searchbutton" id="searchBtn" type="button">Search</button>
-				<p id="statusMessage">loading...</p>
-      	</section>
+				<p class="status" id="statusMessage">loading...</p>
+      		</section>
+		</section>
 		
 		<section>
 			<div class="weatherCard hidden" id="weatherCard" aria-live="polite">
@@ -31,8 +33,8 @@
 				</div>
 				<div class="windCard">
 					<p class="windSpeed" id="windValue">Wind Speed: mph</p>
-					<p class="direction" id="windDirectionValue">Wind Direction: </p>
-					<p class="dewPoint" id="dewPointValue">Dew Point: </p>
+					<p class="direction" id="winddirectionValue">Wind Direction: </p>
+					<p class="uvIndex" id="uvValue">UV Index: </p>
 				</div>
 			</div>
       	</section>

@@ -1,3 +1,102 @@
 @charset "UTF-8";
 /* CSS Document */
 
+.maincontainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.topCard {
+	display: flex;
+	flex-direction: column;
+	max-width: 90%;
+	max-height: 50%;
+	align-content: center;
+	justify-content: center;
+	text-align: center;
+	padding: 2px 16px;
+	background-color: #1e1e1e;
+	margin-bottom: 50px;
+	color: white;
+}
+
+.headingbox {
+	
+}
+
+.searchsection {
+	
+}
+
+.cityInput {
+	
+}
+
+.searchbutton {
+	
+}
+
+.status {
+	
+}
+
+
+
+.weatherCard {
+	display: grid;
+	width: 1200px;
+	height: 350px;
+	background-color: #1e1e1e;
+	color: white;
+	padding: 15px 15px;
+}
+
+
+.mainCard {
+	grid-column: 1 / span 2;
+	grid-row: 1 / span 2;
+}
+
+.weatherIcon {
+	grid-column: 1 / span 2;
+	grid-row: 1 / span 2;
+}
+
+.cityName {
+	grid-column: 2 / span 1;
+}
+
+.weatherCondition {
+	grid-column: 2 / span 1;
+	grid-row: 2 / span 1;
+}
+
+
+.tempCard {
+	grid-column: 3 / span 1;
+	grid-row: 1 / span 3;
+}
+
+.windCard {
+	grid-column: 2/ span 2;
+	padding: 10px;
+}
+
+
+.windSpeed {
+	display: inline;
+	padding: 25px;
+}
+
+.direction {
+	display: inline;
+	padding: 25px;
+}
+
+.uvIndex {
+	display: inline;
+	padding: 25px;
+}
+
